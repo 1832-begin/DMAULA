@@ -11,17 +11,30 @@ class HomePageState extends State<HomePage> {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+          title: Text(
+        'APP FLUTTER ADS',
+      )),
+      body: Center(
           child: GestureDetector(
-        child: Text('CLICK: $counter'),
+        child: Text('CLICK: $counter', style: TextStyle(fontSize: 50)),
         onTap: () {
           setState(() {
-            counter++;
-            print(counter);
+            counter--;
+            //print(counter);
           });
         },
       )),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add_circle),
+        onPressed: () {
+          setState(() {
+            counter++;
+            //print(counter);
+          });
+        },
+      ),
     );
   }
 }
