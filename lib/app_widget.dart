@@ -1,7 +1,9 @@
+import 'package:aulamoveis/login_page.dart';
 import 'package:flutter/material.dart';
 
 import 'app.controller.dart';
 import 'home_page.dart';
+import 'login_page.dart';
 
 class AppWidget extends StatelessWidget {
   final String title;
@@ -18,7 +20,7 @@ class AppWidget extends StatelessWidget {
               brightness: AppController.instance.isDark
                   ? Brightness.dark
                   : Brightness.light),
-          home: HomePage(),
+          home: LoginPage(),
         );
       },
     );
