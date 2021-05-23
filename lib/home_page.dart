@@ -1,3 +1,4 @@
+import 'package:aulamoveis/app.controller.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,23 +10,75 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
+  bool isDark = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-        'APP FLUTTER ADS',
-      )),
-      body: Center(
-          child: GestureDetector(
-        child: Text('CLICK: $counter', style: TextStyle(fontSize: 50)),
-        onTap: () {
-          setState(() {
-            counter--;
-            //print(counter);
-          });
-        },
-      )),
+        title: Text('APP FLUTTER ADS'),
+        actions: [CustomSwitch()],
+      ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: ListView(
+          // infinito igual do face
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(child: CustomSwitch()),
+            Container(
+              height: 150,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              color: Colors.pink,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              color: Colors.pink,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              color: Colors.pink,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              color: Colors.pink,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              color: Colors.pink,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.blue,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.pink,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.green,
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
         onPressed: () {
@@ -36,5 +89,16 @@ class HomePageState extends State<HomePage> {
         },
       ),
     );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+        value: AppController.instance.isDark,
+        onChanged: (value) {
+          AppController.instance.changeThame();
+        });
   }
 }
