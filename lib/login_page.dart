@@ -24,6 +24,8 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.network(
+                    'https://static6.depositphotos.com/1003034/633/i/600/depositphotos_6338441-stock-photo-red-button.jpg'),
                 TextField(
                   onChanged: (text) => email = text,
                   keyboardType: TextInputType.emailAddress,
@@ -51,9 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                       if (email == 'luanacabral430@gmail.com' &&
                           senha == '123') {
                         print('login correto');
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => HomePage()),
-                        );
+                        Navigator.of(context).pushNamed('/home');
                       } else {
                         print('login errado');
                       }
