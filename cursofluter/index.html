@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+<link href='https://cdn.thinkific.com' rel='preconnect'>
+<link crossorigin='true' href='https://fonts.gstatic.com' rel='preconnect'>
+<link rel='preload' href='//cdn-internal.thinkific.com/kobayashi/assets/vendor-4d6e9185450966c0cabdb0b6ab7efd2c.js' as='script' crossorigin></link>
+<link rel='preload' href='//cdn-internal.thinkific.com/kobayashi/assets/course-player-v2-254a7742948eefc06876f351066be318.js' as='script' crossorigin></link>
+<link rel='preload' href='//cdn-internal.thinkific.com/kobayashi/assets/vendor-e0cb822bbe090c173fe20baeb13b0c48.css' as='style' crossorigin></link>
+<link rel='preload' href='//cdn-internal.thinkific.com/kobayashi/assets/course-player-v2-d45691fdbfd73e9716f548cb83e1b591.css' as='style' crossorigin></link>
+<script>
+  if (typeof mixpanel === 'undefined') {
+    (function(e,b){if(!b.__SV){
+    var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+    typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+    b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+  }
+  
+  if(true) {
+    mixpanel.init('79997444378eb132a6579a0f56004a2a');
+  }
+  
+  if(false) {
+    mixpanel.init('e9f85a260e22673665c335ea07907e45', {
+      loaded: function(thinkificSystem) {
+        thinkificSystem.identify('16e1919ee1220b-0c46081dc028a4-123e6a5a-13c680-16e1919ee134c0');
+  
+        const MAX_ATTEMPTS = 5;
+        let attempts = 0;
+        let delay = 500;
+  
+        const processEvents = function() {
+          attempts += 1;
+          delay *= 2;
+  
+          if (typeof ThinkificAnalytics !== 'undefined') {
+            ThinkificAnalytics.process_system_events_queue();
+          } else if (attempts < MAX_ATTEMPTS) {
+            setTimeout(processEvents, delay);
+          }
+        }
+  
+        // Attempt to process system events after an initial delay to allow time for ThinkificAnalytics
+        // to become available on the window object. Supports incrementally-delayed retries up to a maximum
+        // amount to accommodate for cases where ThinkificAnalytics takes longer than normal to be mounted.
+        setTimeout(processEvents, delay);
+      }
+    }, 'thinkific_system');
+  
+    // Unregister particular tenant event properties for thinkific_system events on Tenant sites.
+    // Properties will be re-registered when initializing mixpanel via the _mixpanel_instructor partial.
+    mixpanel.thinkific_system.unregister('Application');
+    mixpanel.thinkific_system.unregister('Current Page');
+    mixpanel.thinkific_system.unregister('Referrer Page');
+  }
+</script>
+
+
+
+<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='2eabfb4261813e36cb76e247409c5ab1edf8051dfd5310afc41ac09eec4a5d98';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
+
+
+<script>
+  window.Thinkific = window.Thinkific || {};
+  window.Thinkific.current_user = {"id":44916461,"first_name":"LUANA","last_name":"CABRAL","email":"luanacabral430@gmail.com","external_source":null,"subdomain":"cod3r","full_name":"LUANA CABRAL","created_at":1619746651,"last_sign_in_at":1619746651,"number_courses_complete":0,"external_id":null,"tenant_id":220759,"groups":[]};
+</script>
+
+<title>Cod3r</title>
+
+
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="google-site-verification" content="Y1BJPmmyBHwrCcUypF8IuL37RNi2e-z3LF6iQc-iHPw" />
+
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" type="image/x-icon" href="https://s3.amazonaws.com/thinkific-import/220759/osIxcTOqTGmGchceyq5i_SO_LOGO_300_png" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="OiT3MpmhiuhLR7L4fZI5nfR+Xqn/paUjx0R3PWGs0ACvUATso37FKZqzbDe2IzZSINVKb5r4CfddyIv8aINtEg==" />
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  var thinkific_google_analytics_disabled = ""
+  if (!thinkific_google_analytics_disabled) {
+    var tcd = "thinkific.com";
+    ga('create', 'UA-30557184-1', 'auto', { 'cookieDomain': tcd });
+    ga('send', 'pageview');
+  }
+  
+  var tenantGoogleAnalyticsKey = "";
+  
+  if(tenantGoogleAnalyticsKey) {
+    var tenantCD = "www.cod3r.com.br";
+    ga('create', tenantGoogleAnalyticsKey, 'auto', { 'name': 'tenantTracker', 'cookieDomain': tenantCD });
+    ga('tenantTracker.send', 'pageview');
+  }
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1210569562341843');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1210569562341843&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<link href='https://cdn.thinkific.com/assets/toga-css/0.43.5/fonts/toga-icons.css' rel='stylesheet' type='text/css'>
+<link href='https://cdn.thinkific.com/assets/toga-css/0.43.5/fonts/toga-product-icons.css' rel='stylesheet' type='text/css'>
+<meta name='kobayashi' content='5712f150084c2fb60450aeec380c1f447bfe76b1'>
+<link rel="stylesheet" media="all" href="https://assets.thinkific.com/assets/libs/froala-v2-custom-theme-ce387945bbe5675a3124139056696f51721f6c75bc13a83788dad8e2826ab00e.css" />
+<link rel="stylesheet" href="//cdn-internal.thinkific.com/kobayashi/assets/vendor-e0cb822bbe090c173fe20baeb13b0c48.css">
+<link rel="stylesheet" href="//cdn-internal.thinkific.com/kobayashi/assets/course-player-v2-d45691fdbfd73e9716f548cb83e1b591.css">
+<meta name="description" content="Flutter: Desenvolva um Cadastro Completo  - Cod3r" />
+<style>
+  
+</style>
+</head>
+<body id="courses" class="take cod3r-tenant  course-id-755223"><noscript>
+<style>
+  body {
+    height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+  }
+  #wrap {
+    display: none;
+  }
+  .noscript-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+  }
+  .noscript-container i {
+    font-size: 50px;
+  }
+  .noscript-container h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .noscript-container p {
+    font-size: 16px;
+    color: #929292;
+  }
+  .noscript-container a {
+    color: #1b9eea;
+  }
+  .noscript-container a.btn,
+  .noscript-container a.btn:visited {
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: 1px solid #929292;
+    border-radius: 3px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+  }
+  .noscript-container a.btn:hover {
+    background-color: #e6e6e6;
+  }
+</style>
+<div class='noscript-container'>
+<i class='icon-settings'></i>
+<h3>O conteúdo está aqui, mas você precisa ativar o JavaScript para visualizá-lo.</h3>
+<p>Por favor, <a rel= "noreferrer noopener" target="_blank" href="https://www.enable-javascript.com">ative o JavaScript</a> nas configurações de seu navegador e atualize a página.</p>
+<a class="btn" href="">Atualizar página</a>
+</div>
+</noscript>
+
+<div id='wrap'>
+<div id='data-store'>
+<input id='CourseSlug' type='hidden' value='flutter-desenvolva-um-cadastro-completo'>
+</div>
+<div id='page-content'></div>
+<div id='push'></div>
+</div>
+<script src="//cdn-internal.thinkific.com/kobayashi/assets/vendor-4d6e9185450966c0cabdb0b6ab7efd2c.js"></script>
+<script src="//cdn-internal.thinkific.com/kobayashi/assets/course-player-v2-254a7742948eefc06876f351066be318.js"></script>
+<script src="https://assets.thinkific.com/assets/kobayashi-2eecbf357f7ade961293b4b6d15d744f5163cbaa5cec3831d243a4dbecd1d0e4.js"></script>
+<script src="https://cdn.thinkific.com/assets/moment.js/2.29.0/moment.min.js"></script>
+<script src="https://assets.thinkific.com/assets/libs/moment_locales/pt-BR-0b26c35c90a1a6f4598cff037898d301b0af4cc7287b75befdb300368ad01cd6.js"></script>
+<script>moment.locale("pt-BR")</script>
+<script src='https://cdn.thinkific.com/assets/jqueryui/1.12.1.accordion/jquery-ui.min.js'></script>
+
+
+<script>
+  var userId = 44916461;
+  var email = 'luanacabral430@gmail.com';
+  var mixpanelPerson = {
+    $email: email,
+    $created: '2021-04-30 01:37:31 +0000',
+    $last_login: '2021-04-30 01:37:31 +0000',
+    $first_name: 'LUANA',
+    $last_name: 'CABRAL',
+    'sign_in_count': 2,
+    'admin': false,
+    'referral_code': '',
+    'tenant': 'Cod3r',
+    'subdomain': 'cod3r',
+    'Is Paying': 'false',
+    'Revenue': '0.0',
+    'Courses': ["Flutter: Desenvolva um Cadastro Completo "]
+  };
+  var personTraits = {
+    'email': email,
+    'createdAt': '2021-04-30T01:37:31+00:00',
+    'firstName': 'LUANA',
+    'lastName': 'CABRAL',
+    'name': 'LUANA CABRAL'
+  };
+  ThinkificAnalytics.identify_for_tenant(email, mixpanelPerson, personTraits);
+  ThinkificAnalytics.name_tag(email);
+</script>
+
+
+
+<script type="text/javascript">
+    (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+    vgo('setAccount', '476122067');
+    vgo('setTrackByDefault', true);
+
+    vgo('process');
+</script>
+
+<script id='fr-fek'>
+try{(function (k){localStorage.FEK=k;t=document.getElementById('fr-fek');t.parentNode.removeChild(t);})("GIBEVFBOHF1c1UNYVM==")}catch(e){}
+</script>
+
+</body></html>
